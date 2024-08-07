@@ -1,0 +1,27 @@
+{
+  "name": "pnp-msal",
+  "type": "module",
+  "private": true,
+  "author": {
+    "name": "Jove Jonovski",
+    "email": "jovejonovski@gmail.com",
+    "url": "https://github.com/datyin"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@antfu/eslint-config": "2.24.1",
+    "@azure/msal-browser": "3.20.0",
+    "@pnp/core": "^4.3.0",
+    "@pnp/queryable": "^4.3.0",
+    "@types/node": "22.1.0",
+    "eslint": "9.8.0",
+    "eslint-plugin-format": "0.1.2",
+    "typescript": "5.5.4",
+    "vite": "5.3.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint": "$eslint"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "@datyin/msal-pnp",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Microsoft Authentication Library for PnP",
+  "author": {
+    "name": "Jove Jonovski",
+    "email": "jovejonovski@gmail.com",
+    "url": "https://github.com/datyin"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datyin/pnp-msal.git"
+  },
+  "keywords": [
+    "pnp",
+    "msal",
+    "azure",
+    "@azure/msal",
+    "@azure/msal-browser",
+    "auth",
+    "auth-browser"
+  ],
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "ts:check": "tsc --noEmit",
+    "ts:dts": "tsc -p tsconfig.build.json",
+    "dev": "vite",
+    "build": "pnpm run lint && pnpm run ts:check && vite build && pnpm run ts:dts",
+    "prepublish": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@azure/msal-browser": "^3.14.0",
+    "@pnp/core": ">=3.0.0 || >=4.0.0",
+    "@pnp/queryable": ">=3.0.0 || >=4.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts"
+  }
+}
